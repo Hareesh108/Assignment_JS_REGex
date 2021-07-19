@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Assignment_2-Q2</title>
+    </head>
+    <body>
+       
+        <script>
+            // for taking inputs
+            var calls= prompt("Number of calls: ",'100')
+            var massages= prompt("Number of message: ",'100')
+
+            var call_total=0
+            var msg_total=0
+
+
+            // Calculating Charges of Call
+            if(calls<=50){
+                call_total=50*calls
+            }
+            else if(calls<=150){
+                call_total=50*50+70*(calls-50)
+            }
+            else if(calls<=300){
+                call_total=50*50+100*70+85*(calls-150)
+            }
+            else{
+                call_total=50*50+100*70+150*85+95*(calls-300)
+            }
+
+
+            // printing Charges Of call
+            document.write('Charges for call:' + call_total/100 + '/-' + '<br>')
+
+
+            
+            // Calculating Charges of msg
+            if(massages<=50){
+                msg_total=0
+            }
+            else if(massages<=200){
+                msg_total=0+25*(massages-50)
+            }
+            else if(massages<=400){
+                msg_total=0+25*150+40*(massages-200)
+            }
+            else{
+                msg_total=0+25*150+40*200+45*(massages-400)
+            }
+
+            // printing Charges Of msg
+            document.write('Charges for sms:' + msg_total/100 + '/-' + '<br>')
+            let total= call_total + msg_total
+
+            // Printing Total Charges
+            document.write('Total Charges: '+ total/100 + '/-')
+
+
+
+        </script>
+             
+
+            
+        
+    </body>
+</html>
+
